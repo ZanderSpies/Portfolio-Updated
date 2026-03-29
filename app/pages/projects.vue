@@ -35,9 +35,9 @@ const { data: repos, pending, error } = await useFetch(
     <div v-for="repo in repos.slice(0, 6)" :key="repo.id" class="project-card">
         <img :src="`/${repo.name}.png`" alt="Social Preview" id="project-image">
         <p id="heading">{{ repo.name }}</p>
-        <div id="card-description">
+        <!--<div id="card-description">
             <p>{{ repo.description || 'No description provided.' }}</p>
-        </div>
+        </div>-->
         <a :href="repo.html_url" target="_blank" id="view-button">View</a>
     </div>
 </div>
