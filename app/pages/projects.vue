@@ -8,7 +8,7 @@ const { data: repos, pending, error } = await useFetch(
   `https://api.github.com/users/${username}/repos?sort=updated`,
   {
     transform: (allRepos) => {
-      const excludedNames = ['Mechanaut-Vertical', 'Mechanaut-Comic-Book'];
+      const excludedNames = ['Mechanaut-Vertical', 'Mechanaut-Comic-Book', 'Portfolio-Updated'];
       return allRepos
         .filter(repo => !excludedNames.includes(repo.name))
         .map(repo => ({
